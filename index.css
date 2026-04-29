@@ -8,11 +8,37 @@
   --description-bg: hsla(0, 0%, 92%, 1);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   padding-bottom: 64px;
   margin: 0;
   font-family: Open Sans;
   background-color: var(--main-bg-color);
+}
+
+img {
+  object-fit: cover;
+  border: 1px solid hsla(0, 0%, 99%, 1);
+}
+
+h1 {
+  color: var(--title-color);
+  font-family: Open Sans;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+ul,
+ol {
+  padding-left: 24px;
+  margin: 0;
+}
+
+li {
+  line-height: 32px;
 }
 
 .recipeCard {
@@ -22,12 +48,10 @@ body {
 }
 
 .recipeText {
-  padding: 3rem;
+  padding: 48px 16px 64px 16px;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0%;
-  font-family: Open Sans;
-  line-height: Static/Headline Small/Line Height;
 }
 
 .description {
@@ -35,36 +59,31 @@ body {
   padding: 16px;
 }
 
-img {
-  object-fit: cover;
-  border: 1px solid hsla(0, 0%, 99%, 1);
-}
-
 .mainImage {
   height: 500px;
+  width: 100%;
   max-width: 1280px;
 }
 
 .servingImages {
   display: flex;
+  flex-direction: column;
   gap: 24px;
-
   width: 100%;
-  justify-content: center;
 }
 .servingImages > img {
   height: 467px;
   min-width: 300px;
-  width: 50%;
+  width: 100%;
 }
 
-h1 {
-  color: var(--title-color);
-  font-family: Open Sans;
-  font-weight: 700;
-  font-style: Bold;
-  font-size: 28px;
-  leading-trim: NONE;
-  line-height: 100%;
-  letter-spacing: 0%;
+
+@media (min-width: 740px) {
+    .recipeText {
+  padding: 48px 48px 64px 48px;
+    }
+
+    .servingImages {
+        flex-direction: row;
+    }
 }
