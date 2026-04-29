@@ -1,3 +1,70 @@
+:root {
+  --main-bg-color: hsla(0, 100%, 32%, 0.3);
+  --recipe-bg-color: hsla(0, 0%, 99%, 1);
+
+  --title-color: hsla(0, 100%, 32%, 1);
+  --text-color: hsla(0, 0%, 0%, 1);
+
+  --description-bg: hsla(0, 0%, 92%, 1);
+}
+
+body {
+  padding-bottom: 64px;
+  margin: 0;
+  font-family: Open Sans;
+  background-color: var(--main-bg-color);
+}
+
+.recipeCard {
+  max-width: 1280px;
+  margin: auto;
+  background-color: var(--recipe-bg-color);
+}
+
+.recipeText {
+  padding: 3rem;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0%;
+  font-family: Open Sans;
+  line-height: Static/Headline Small/Line Height;
+}
+
+.description {
+  background-color: var(--description-bg);
+  padding: 16px;
+}
+
+img {
+  object-fit: cover;
+  border: 1px solid hsla(0, 0%, 99%, 1);
+}
+
+.mainImage {
+  height: 500px;
+  max-width: 1280px;
+}
+
+.servingImages {
+  display: flex;
+  gap: 24px;
+
+  width: 100%;
+  justify-content: center;
+}
+.servingImages > img {
+  height: 467px;
+  min-width: 300px;
+  width: 50%;
+}
+
 h1 {
-    color: red;
+  color: var(--title-color);
+  font-family: Open Sans;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 28px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
