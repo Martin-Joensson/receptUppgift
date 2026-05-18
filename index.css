@@ -1,84 +1,132 @@
-:root {
-  --main-bg-color: hsla(0, 100%, 32%, 0.3);
-  --recipe-bg-color: hsla(0, 0%, 99%, 1);
-  --description-bg: hsla(0, 0%, 92%, 1);
-  --title-color: hsla(0, 100%, 32%, 1);
+/* Variables */
 
-  --mobile-break-point: 740px;
+:root {
+  --main-bg-color: hsla(277, 100%, 20%, 0.3);
+  --recipe-bg-color: hsla(0, 0%, 99%, 1);
+  --description-bg: hsl(50, 86%, 97%);
+  --description-border: hsl(0, 0%, 31%);
+  --title-color: hsl(277, 100%, 20%);
 }
 
-* {
+/* Reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+  scroll-gutter: stable;
+}
+
+/* Kepp modal in middle remove all other default margins*/
+*:not(dialog) {
+  margin: 0;
+}
+
+/* Set color scheme */
+html {
+  color-scheme: dark light;
 }
 
 body {
-  padding-bottom: 64px;
-  margin: 0;
-  font-family: Open Sans;
+  min-height: 100svh;
+  padding-bottom: 4rem;
+  font-family:
+    "Poppins",
+    sans serif;
   background-color: var(--main-bg-color);
 }
 
-img {
+img,
+picture,
+svg,
+video {
   object-fit: cover;
+  /* 
   border: 1px solid hsla(0, 0%, 99%, 1);
-  width: 100%;
+  */
+  max-width: 100%;
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Autour One", display;
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
 h1 {
   color: var(--title-color);
-  font-weight: 700;
-  font-size: 28px;
+
+  font-size: 1.75rem;
 }
 
 ul,
 ol {
-  padding-left: 24px;
+  padding-left: 1.5rem;
 }
 
 li {
-  line-height: 32px;
+  line-height: 2rem;
 }
 
 .recipeCard {
   max-width: 1280px;
+  border-radius: 0 0 2rem 2rem;
   margin: auto;
   background-color: var(--recipe-bg-color);
 }
 
 .recipeText {
-  padding: 48px 16px 64px 16px;
-  font-size: 16px;
+  padding: 3rem 1rem 4rem 1rem;
   font-weight: 400;
   letter-spacing: 0%;
 }
 
 .description {
   background-color: var(--description-bg);
-  padding: 16px;
+  padding: 1rem;
+  border: 1px solid var(--description-border);
+  border-radius: 2rem 2rem 2rem 0;
+}
+
+.heroSection {
+  height: 30dvh;
 }
 
 .mainImage {
-  height: 500px;
-  max-width: 1280px;
+  height: 100%;
+  width: 100%;
 }
 
 .servingImages {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  width: 100%;
+  gap: 1.5rem;
 }
 .servingImages > img {
-  height: 467px;
-  min-width: 300px;
+  height: 30rem;
+  width: 100%;
 }
 
 @media (min-width: 740px) {
   .recipeText {
-    padding: 48px 48px 64px 48px;
+    padding: 3rem 3rem 4rem 3rem;
   }
 
   .servingImages {
     flex-direction: row;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-bg-color: hsla(277, 100%, 20%, 0.3);
+    --recipe-bg-color: rgb(55, 55, 55);
+    --description-bg: hsl(0, 0%, 31%);
+    --description-border: hsl(0, 0%, 0%);
+    --title-color: hsl(277, 63%, 65%);
   }
 }
