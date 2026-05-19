@@ -1,11 +1,25 @@
 /* Variables */
 
 :root {
-  --main-bg-color: hsla(277, 100%, 20%, 0.3);
-  --recipe-bg-color: hsla(0, 0%, 99%, 1);
-  --description-bg: hsl(50, 86%, 97%);
-  --description-border: hsl(0, 0%, 31%);
-  --title-color: hsl(277, 100%, 20%);
+  /* Colors */
+  --clr-main-bg: hsla(277, 100%, 20%, 0.3);
+  --clr-recipe-bg: hsla(0, 0%, 99%, 1);
+  --clr-description-bg: hsl(50, 86%, 97%);
+  --clr-description-border: hsl(0, 0%, 31%);
+  --clr-title: hsl(277, 100%, 20%);
+
+  /* Fonts */
+  --font-primary: "Poppins", sans serif;
+  --font-heading: "Autour One", display;
+
+  /* Font weights */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* Spacing */
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 3rem;
 }
 
 /* Reset */
@@ -30,10 +44,8 @@ html {
 body {
   min-height: 100svh;
   padding-bottom: 4rem;
-  font-family:
-    "Poppins",
-    sans serif;
-  background-color: var(--main-bg-color);
+  font-family: var(--font-primary);
+  background-color: var(--clr-main-bg);
 }
 
 img,
@@ -52,20 +64,20 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Autour One", display;
+  font-family: var(--font-heading);
   font-weight: 700;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
+  margin-top: var(--spacing-medium);
+  margin-bottom: var(--spacing-small);
 }
 h1 {
-  color: var(--title-color);
+  color: var(--clr-title);
 
   font-size: 1.75rem;
 }
 
 ul,
 ol {
-  padding-left: 1.5rem;
+  padding-left: var(--spacing-large);
 }
 
 li {
@@ -76,7 +88,7 @@ li {
   max-width: 1280px;
   border-radius: 0 0 2rem 2rem;
   margin: auto;
-  background-color: var(--recipe-bg-color);
+  background-color: var(--clr-recipe-bg);
 }
 
 .recipeText {
@@ -86,9 +98,9 @@ li {
 }
 
 .description {
-  background-color: var(--description-bg);
-  padding: 1rem;
-  border: 1px solid var(--description-border);
+  background-color: var(--clr-description-bg);
+  padding: var(--spacing-medium);
+  border: 1px solid var(--clr-description-border);
   border-radius: 2rem 2rem 2rem 0;
 }
 
@@ -104,7 +116,7 @@ li {
 .servingImages {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: var(--spacing-medium);
 }
 .servingImages > img {
   height: 30rem;
@@ -123,10 +135,10 @@ li {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --main-bg-color: hsla(277, 100%, 20%, 0.3);
-    --recipe-bg-color: rgb(55, 55, 55);
-    --description-bg: hsl(0, 0%, 31%);
-    --description-border: hsl(0, 0%, 0%);
-    --title-color: hsl(277, 63%, 65%);
+    --clr-main-bg: hsla(277, 100%, 20%, 0.3);
+    --clr-recipe-bg: rgb(55, 55, 55);
+    --clr-description-bg: hsl(0, 0%, 31%);
+    --clr-description-border: hsl(0, 0%, 0%);
+    --clr-title: hsl(277, 63%, 65%);
   }
 }
