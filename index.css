@@ -22,6 +22,7 @@
   --clr-dark-text: hsl(0, 0%, 0%);
   --clr-light-text: hsl(0, 0%, 99%);
 
+  /* Light and dark mode colors */
   --clr-ld-main-bg: light-dark(var(--clr-main-bg), var(--clr-dark-main-bg));
   --clr-ld-text: light-dark(var(--clr-dark-text), var(--clr-light-text));
   --clr-ld-title: light-dark(var(--clr-title), var(--clr-dark-title));
@@ -56,23 +57,6 @@
   --spacing-large: 3rem;
 }
 
-/* Set color scheme */
-/* html {
-  color-scheme: dark light;
-} */
-
-html:has(#mode-switcher #light:checked) {
-  color-scheme: light;
-}
-html:has(#mode-switcher #dark:checked) {
-  color-scheme: dark;
-
-  .logo {
-    filter: invert(89%) sepia(99%) saturate(20%) hue-rotate(62deg)
-      brightness(106%) contrast(100%);
-  }
-}
-
 /* Reset */
 /* Box sizing rules */
 *,
@@ -85,6 +69,18 @@ html:has(#mode-switcher #dark:checked) {
 /* Kepp modal in middle remove all other default margins*/
 *:not(dialog) {
   margin: 0;
+}
+
+html:has(#mode-switcher #light:checked) {
+  color-scheme: light;
+}
+html:has(#mode-switcher #dark:checked) {
+  color-scheme: dark;
+
+  .logo {
+    filter: invert(89%) sepia(99%) saturate(20%) hue-rotate(62deg)
+      brightness(106%) contrast(100%);
+  }
 }
 
 body {
@@ -114,6 +110,7 @@ video {
   object-fit: cover;
   max-width: 100%;
 }
+
 h1,
 h2,
 h3,
@@ -125,9 +122,9 @@ h6 {
   margin-top: var(--spacing-medium);
   margin-bottom: var(--spacing-small);
 }
+
 h1 {
   color: var(--clr-ld-title);
-
   font-size: 1.75rem;
 }
 
@@ -229,13 +226,6 @@ a {
   letter-spacing: 0%;
 }
 
-.description {
-  background-color: var(--clr-ld-description-bg);
-  padding: var(--spacing-medium);
-  border: 1px solid var(--clr-description-border);
-  border-radius: 2rem 2rem 2rem 0;
-}
-
 .hero-section {
   height: 30dvh;
 }
@@ -244,6 +234,13 @@ a {
   height: 100%;
   width: 100%;
   border-radius: 2rem 2rem 0 0;
+}
+
+.description {
+  background-color: var(--clr-ld-description-bg);
+  padding: var(--spacing-medium);
+  border: 1px solid var(--clr-description-border);
+  border-radius: 2rem 2rem 2rem 0;
 }
 
 .serving-images {
