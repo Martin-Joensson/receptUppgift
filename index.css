@@ -2,11 +2,28 @@
 
 :root {
   /* Colors */
-  --clr-main-bg: hsla(277, 100%, 20%, 0.3);
-  --clr-recipe-bg: hsla(0, 0%, 99%, 1);
+  --clr-main-bg: hsl(7, 68%, 85%);
+  --clr-dark-main-bg: hsl(0, 0%, 6%);
+  --clr-recipe-bg: hsl(0, 0%, 99%);
+  --clr-dark-recipe-bg: hsl(0, 0%, 17%);
   --clr-description-bg: hsl(50, 86%, 97%);
+  --clr-dark-description-bg: hsl(0, 0%, 31%);
   --clr-description-border: hsl(0, 0%, 31%);
+  --clr-footer-bg: hsl(7, 68%, 85%,0.5);
+  --clr-dark-footer-bg: hsl(0, 0%, 17%,0.5);
+
   --clr-title: hsl(277, 100%, 20%);
+  --clr-dark-title: hsl(277, 63%, 65%);
+
+  --clr-dark-text: hsl(0, 0%, 0%);
+  --clr-light-text: hsl(0, 0%, 99%);
+
+  --clr-ld-main-bg: light-dark(var(--clr-main-bg), var(--clr-dark-main-bg));
+  --clr-ld-text: light-dark(var(--clr-dark-text), var(--clr-light-text));
+  --clr-ld-title: light-dark(var(--clr-title), var(--clr-dark-title));
+  --clr-ld-recipe-bg: light-dark(var(--clr-recipe-bg), var(--clr-dark-recipe-bg));
+  --clr-ld-description-bg: light-dark(var(--clr-description-bg), var(--clr-dark-description-bg));
+  --clr-ld-footer-bg: light-dark(var(--clr-footer-bg), var(--clr-dark-footer-bg));
 
   /* Fonts */
   --font-primary: "Poppins", sans serif;
@@ -20,6 +37,18 @@
   --spacing-small: 0.5rem;
   --spacing-medium: 1rem;
   --spacing-large: 3rem;
+}
+
+/* Set color scheme */
+/* html {
+  color-scheme: dark light;
+} */
+
+html:has(#mode-switcher #light:checked) {
+  color-scheme: light;
+}
+html:has(#mode-switcher #dark:checked) {
+  color-scheme: dark;
 }
 
 /* Reset */
@@ -36,16 +65,16 @@
   margin: 0;
 }
 
-/* Set color scheme */
-html {
-  color-scheme: dark light;
-}
-
 body {
   min-height: 100svh;
-  padding-bottom: 4rem;
+
   font-family: var(--font-primary);
-  background-color: var(--clr-main-bg);
+  background-color: var(--clr-ld-main-bg);
+  color: var(--clr-ld-text);
+}
+
+main{
+    padding-bottom: 4rem;
 }
 
 img,
@@ -70,7 +99,7 @@ h6 {
   margin-bottom: var(--spacing-small);
 }
 h1 {
-  color: var(--clr-title);
+  color: var(--clr-ld-title);
 
   font-size: 1.75rem;
 }
@@ -84,61 +113,100 @@ li {
   line-height: 2rem;
 }
 
-.recipeCard {
+footer {
+  width: 100%;
+  background-color: var(--clr-ld-footer-bg);
+  padding: var(--spacing-small);
+  display: flex;
+  justify-content: center;
+  border-radius: 1rem 1rem 0 0 ;
+}
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  left: 0;
+  width: auto;
+  height: auto;
+  background: white;
+  color: black;
+  padding: var(--spacing-small);
+  margin: var(--spacing-medium);
+}
+
+.recipe-card {
   max-width: 1280px;
   border-radius: 0 0 2rem 2rem;
   margin: auto;
-  background-color: var(--clr-recipe-bg);
+  background-color: var(--clr-ld-recipe-bg);
 }
 
-.recipeText {
+.recipe-text {
   padding: 3rem 1rem 4rem 1rem;
   font-weight: 400;
   letter-spacing: 0%;
 }
 
 .description {
-  background-color: var(--clr-description-bg);
+  background-color: var(--clr-ld-description-bg);
   padding: var(--spacing-medium);
   border: 1px solid var(--clr-description-border);
   border-radius: 2rem 2rem 2rem 0;
 }
 
-.heroSection {
+.hero-section {
   height: 30dvh;
 }
 
-.mainImage {
+.main-image {
   height: 100%;
   width: 100%;
 }
 
-.servingImages {
+.serving-images {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-medium);
 }
-.servingImages > img {
+
+.serving-images > img {
   height: 30rem;
   width: 100%;
 }
 
+.mode-switcher{
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid var(--clr-description-border); */
+  border-radius: 0.5rem;
+  padding-inline: var(--spacing-large);
+    background-color: var(--clr-ld-main-bg);
+}
+
+
 @media (min-width: 740px) {
-  .recipeText {
+  .recipe-text {
     padding: 3rem 3rem 4rem 3rem;
   }
 
-  .servingImages {
+  .serving-images {
     flex-direction: row;
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --clr-main-bg: hsla(277, 100%, 20%, 0.3);
-    --clr-recipe-bg: rgb(55, 55, 55);
+    --clr-main-bg: hsla(0, 0%, 17%, 0.3);
+    --clr-recipe-bg: rgb(43, 43, 43);
     --clr-description-bg: hsl(0, 0%, 31%);
     --clr-description-border: hsl(0, 0%, 0%);
     --clr-title: hsl(277, 63%, 65%);
-  }
+  } */
 }

@@ -13,19 +13,22 @@
   </head>
 
   <body>
-    <main>
-      <article class="recipeCard">
-        <div class="heroSection">
+    <header>
+      <a href="#main" class="skip-link">Hoppa till huvudinnehåll</a>
+    </header>
+    <main id="main">
+      <article class="recipe-card">
+        <div class="hero-section">
           <img
-            class="mainImage"
+            class="main-image"
             src="./assets/main.jpg"
-            alt="Pannkakor med jordgubbar och grädde."
+            alt=""
             width="600"
             height="400"
           />
         </div>
 
-        <div class="recipeText">
+        <div class="recipe-text">
           <header>
             <h1>Enkelt recept på pannkakor</h1>
             <p class="description">
@@ -64,7 +67,7 @@
 
           <section>
             <h2>Serveringsförslag</h2>
-            <figure class="servingImages">
+            <figure class="serving-images">
               <img
                 loading="lazy"
                 src="./assets/serving1.jpg"
@@ -84,5 +87,17 @@
         </div>
       </article>
     </main>
+    <footer>
+      <div id="mode-switcher" class="mode-switcher">
+        <p class="select-theme-text">Select theme:</p>
+
+        <div class="select-theme-radio">
+          <input type="radio" name="theme" id="light" value="light" checked />
+          <label for="light">Light</label>
+          <input type="radio" name="theme" id="dark" value="dark" />
+          <label for="dark">Dark</label>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
