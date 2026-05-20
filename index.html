@@ -17,7 +17,8 @@
       <a href="#main" class="skip-link">Hoppa till huvudinnehåll</a>
     </header>
     <main id="main">
-      <article class="recipe-card">
+     
+      <article class="recipe-card" aria-labelledby="titel">
         <div class="hero-section">
           <img
             class="main-image"
@@ -30,7 +31,7 @@
 
         <div class="recipe-text">
           <header>
-            <h1>Enkelt recept på pannkakor</h1>
+            <h1 id="titel">Enkelt recept på pannkakor</h1>
             <p class="description">
               Gör traditionella tunna pannkakor med detta enkla och goda
               pannkaksrecept.
@@ -88,16 +89,16 @@
       </article>
     </main>
     <footer>
-      <div id="mode-switcher" class="mode-switcher">
-        <p class="select-theme-text">Select theme:</p>
+      <fieldset id="mode-switcher" class="mode-switcher">
+        <legend class="select-theme-text">Välj färgtema:</legend>
 
         <div class="select-theme-radio">
           <input type="radio" name="theme" id="light" value="light" checked />
-          <label for="light">Light</label>
+          <label for="light">Ljust</label>
           <input type="radio" name="theme" id="dark" value="dark" />
-          <label for="dark">Dark</label>
+          <label for="dark">Mörkt</label>
         </div>
-      </div>
+      </fieldset>
     </footer>
   </body>
 </html>
