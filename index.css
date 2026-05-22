@@ -4,20 +4,23 @@
   /* Colors */
   --clr-main-bg: hsl(7, 68%, 85%);
   --clr-dark-main-bg: hsl(0, 0%, 6%);
+
   --clr-recipe-bg: hsl(0, 0%, 99%);
   --clr-dark-recipe-bg: hsl(0, 0%, 17%);
+
   --clr-description-bg: hsl(50, 86%, 97%);
   --clr-dark-description-bg: hsl(0, 0%, 31%);
+
   --clr-description-border: hsl(0, 0%, 31%);
 
   --clr-header-bg: hsla(51, 68%, 85%, 0.5);
   --clr-dark-header-bg: hsla(90, 0%, 17%, 0.5);
 
-  --clr-footer-bg: hsl(7, 68%, 85%, 0.5);
-  --clr-dark-footer-bg: hsl(0, 0%, 17%, 0.5);
+  --clr-footer-bg: hsla(7, 68%, 85%, 0.5);
+  --clr-dark-footer-bg: hsla(0, 0%, 17%, 0.5);
 
-  --clr-title: hsl(277, 100%, 20%);
-  --clr-dark-title: hsl(277, 63%, 65%);
+  --clr-title: hsl(300, 24%, 39%);
+  --clr-dark-title: hsl(302, 32%, 58%);
 
   --clr-dark-text: hsl(0, 0%, 0%);
   --clr-light-text: hsl(0, 0%, 99%);
@@ -66,7 +69,7 @@
   scroll-gutter: stable;
 }
 
-/* Kepp modal in middle remove all other default margins*/
+/* Keeps modal in middle remove all other default margins*/
 *:not(dialog) {
   margin: 0;
 }
@@ -153,8 +156,22 @@ a {
   padding: var(--spacing-small);
 }
 
-.logo:hover,
-.logo:focus {
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-text {
+  display: none;
+  font-size: 3rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--clr-ld-text);
+  margin-left: var(--spacing-small);
+}
+
+.logo-link:hover,
+.logo-link:focus {
   border-bottom: 1px solid var(--clr-dark-title);
 }
 
@@ -276,5 +293,9 @@ a {
 
   .header-container {
     flex-direction: row;
+  }
+
+  .logo-text {
+    display: block;
   }
 }

@@ -9,7 +9,7 @@
     <meta name="author" content="Martin Jönsson" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enkla Pannkakor</title>
-      <link rel="icon" type="image/x-icon" href="./assets/logo.svg">
+    <link rel="icon" type="image/x-icon" href="./assets/logo.svg">
     <link rel="stylesheet" href="index.css" />
     <link rel="preconnect" href="https://fonts.bunny.net" />
     <link
@@ -22,7 +22,7 @@
     <header class="main-header">
       <div class="header-container">
         <a href="#main" class="skip-link">Hoppa till huvudinnehåll</a>
-        <a href="#" aria-label="Gå till startsidan">
+        <a class="logo-link" href="#" aria-label="Gå till startsidan">
           <img
             src="./assets/logo.svg"
             alt=""
@@ -30,6 +30,7 @@
             height="60"
             class="logo"
           />
+          <span class="logo-text">Ankans Recept</span>
         </a>
         <nav class="main-nav" aria-label="Huvudnavigering">
           <ul class="nav-list">
@@ -40,8 +41,7 @@
       </div>
     </header>
     <main id="main">
-      <!-- Valde att sätta aria-labelledby här i fallet där man skulle ha fler
-      recept på en sida. -->
+      <!-- Chose to make this a aria-labelledby incase of more than one recipe per page. -->
       <article class="recipe-card" aria-labelledby="titel">
         <div class="hero-section">
           <!--  Null-alt becuase of decorative nature of the image -->
@@ -96,6 +96,7 @@
 
           <section>
             <h2>Serveringsförslag</h2>
+            <!-- Figure element for grouping the serving images -->
             <figure class="serving-images">
               <img
                 loading="lazy"
