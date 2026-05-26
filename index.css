@@ -2,48 +2,44 @@
 
 :root {
   /* Colors */
-  --clr-main-bg: hsl(7, 68%, 85%);
-  --clr-dark-main-bg: hsl(0, 0%, 6%);
+  --clr-light-pink: hsl(7, 68%, 85%);
+  --clr-black: hsl(0, 0%, 6%);
+  --clr-dark-gray: hsl(0, 0%, 17%);
+  --clr-middle-gray: hsl(0, 0%, 31%);
+  --clr-white: hsl(0, 0%, 99%);
 
-  --clr-recipe-bg: hsl(0, 0%, 99%);
-  --clr-dark-recipe-bg: hsl(0, 0%, 17%);
-
-  --clr-description-bg: hsl(50, 86%, 97%);
-  --clr-dark-description-bg: hsl(0, 0%, 31%);
+  --clr-accent-yellow: hsl(50, 86%, 97%);
 
   --clr-description-border: hsl(0, 0%, 31%);
 
-  --clr-header-bg: hsla(51, 68%, 85%, 0.5);
-  --clr-dark-header-bg: hsla(90, 0%, 17%, 0.5);
+  --clr-accent-yellow-transparent: hsla(51, 68%, 85%, 0.5);
+  --clr-middle-gray-transparent: hsla(90, 0%, 17%, 0.5);
 
-  --clr-footer-bg: hsla(7, 68%, 85%, 0.5);
-  --clr-dark-footer-bg: hsla(0, 0%, 17%, 0.5);
+  --clr-dark-pink-transparent: hsla(7, 68%, 85%, 0.5);
+  --clr-black-transparent: hsla(0, 0%, 17%, 0.5);
 
-  --clr-title: hsl(300, 24%, 39%);
-  --clr-dark-title: hsl(302, 32%, 58%);
+  --clr-dark-purple: hsl(300, 24%, 39%);
+  --clr-light-purple: hsl(302, 32%, 58%);
 
   --clr-dark-text: hsl(0, 0%, 0%);
   --clr-light-text: hsl(0, 0%, 99%);
 
   /* Light and dark mode colors */
-  --clr-ld-main-bg: light-dark(var(--clr-main-bg), var(--clr-dark-main-bg));
+  --clr-ld-main-bg: light-dark(var(--clr-light-pink), var(--clr-black));
   --clr-ld-text: light-dark(var(--clr-dark-text), var(--clr-light-text));
-  --clr-ld-title: light-dark(var(--clr-title), var(--clr-dark-title));
-  --clr-ld-recipe-bg: light-dark(
-    var(--clr-recipe-bg),
-    var(--clr-dark-recipe-bg)
-  );
+  --clr-ld-title: light-dark(var(--clr-dark-purple), var(--clr-light-purple));
+  --clr-ld-recipe-bg: light-dark(var(--clr-white), var(--clr-dark-gray));
   --clr-ld-description-bg: light-dark(
-    var(--clr-description-bg),
-    var(--clr-dark-description-bg)
+    var(--clr-accent-yellow),
+    var(--clr-middle-gray)
   );
   --clr-ld-header-bg: light-dark(
-    var(--clr-header-bg),
-    var(--clr-dark-header-bg)
+    var(--clr-accent-yellow-transparent),
+    var(--clr-middle-gray-transparent)
   );
   --clr-ld-footer-bg: light-dark(
-    var(--clr-footer-bg),
-    var(--clr-dark-footer-bg)
+    var(--clr-dark-pink-tranparent),
+    var(--clr-black-transparent)
   );
 
   /* Fonts */
@@ -122,8 +118,8 @@ h5,
 h6 {
   font-family: var(--font-heading);
   font-weight: 700;
-  margin-top: var(--spacing-medium);
-  margin-bottom: var(--spacing-small);
+  margin-block-start: var(--spacing-medium);
+  margin-block-end: var(--spacing-small);
 }
 
 h1 {
@@ -167,12 +163,12 @@ a {
   font-size: 3rem;
   font-weight: var(--font-weight-bold);
   color: var(--clr-ld-text);
-  margin-left: var(--spacing-small);
+  margin-inline-start: var(--spacing-small);
 }
 
 .logo-link:hover,
 .logo-link:focus {
-  border-bottom: 1px solid var(--clr-dark-title);
+  border-bottom: 1px solid var(--clr-light-purple);
 }
 
 .header-container {
@@ -204,8 +200,8 @@ a {
 
   &:hover,
   &:focus {
-    color: var(--clr-dark-title);
-    border-bottom: 1px solid var(--clr-dark-title);
+    color: var(--clr-light-purple);
+    border-bottom: 1px solid var(--clr-light-purple);
   }
 }
 
@@ -231,10 +227,10 @@ a {
 .recipe-card {
   max-width: 1280px;
   border-radius: 0 0 2rem 2rem;
-  margin: auto;
+  margin-inline: auto;
   background-color: var(--clr-ld-recipe-bg);
   border-radius: 2rem;
-  margin-top: 1rem;
+  margin-block-start: 1rem;
 }
 
 .recipe-info {
