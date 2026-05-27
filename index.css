@@ -299,7 +299,27 @@ a {
   background-color: var(--clr-ld-recipe-bg);
   border: 1px solid var(--clr-description-border);
   border-radius: 1rem;
-  transform: rotate(0deg);
+}
+
+/* Adding rotation effects */
+
+.card-link {
+  transform: rotate(3deg);
+}
+.card-link:nth-child(2n) {
+  transform: rotate(-2deg);
+}
+.card-link:nth-child(3n) {
+  transform: rotate(1deg);
+}
+.card-link:nth-child(4n) {
+  transform: rotate(-3deg);
+}
+.card-link:nth-child(5n) {
+  transform: rotate(-2deg);
+}
+.card-link:nth-child(6n) {
+  transform: rotate(2deg);
 }
 
 .card:hover,
@@ -326,7 +346,6 @@ a {
   max-height: 200px;
   border-radius: 1rem 1rem 0 0;
 }
-
 
 .tag {
   text-wrap: nowrap;
