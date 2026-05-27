@@ -160,7 +160,7 @@ a {
 
 .logo-text {
   display: none;
-  font-size: 3rem;
+  font-size: clamp(2rem, 2.5vw, 3rem);
   font-weight: var(--font-weight-bold);
   color: var(--clr-ld-text);
   margin-inline-start: var(--spacing-small);
@@ -203,6 +203,10 @@ a {
     color: var(--clr-light-purple);
     border-bottom: 1px solid var(--clr-light-purple);
   }
+}
+
+.login-link {
+  width: 4rem;
 }
 
 .skip-link {
@@ -276,6 +280,61 @@ a {
   border-radius: 0.5rem;
   padding-inline: var(--spacing-large);
   background-color: var(--clr-ld-main-bg);
+}
+
+.card-grid {
+  max-width: 1280px;
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+}
+
+.card {
+  min-height: 300px;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 30% auto;
+  background-color: var(--clr-ld-recipe-bg);
+  border: 1px solid var(--clr-description-border);
+  border-radius: 1rem;
+  transform: rotate(0deg);
+}
+
+.card:hover,
+.card:focus {
+  text-decoration: underline;
+  transform: translateY(-2px) rotate(1.02deg);
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card-link {
+  text-decoration: none;
+  color: var(--clr-ld-text);
+}
+
+.card-text {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding: var(--spacing-medium);
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  max-height: 200px;
+  border-radius: 1rem 1rem 0 0;
+}
+
+
+.tag {
+  text-wrap: nowrap;
+  background-color: var(--clr-ld-title);
+  color: var(--clr-white);
+  font-size: 0.75rem;
+  padding: 0 var(--spacing-small);
+  border-radius: 0.5rem;
 }
 
 @media (min-width: 740px) {
