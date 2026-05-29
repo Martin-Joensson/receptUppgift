@@ -2,16 +2,31 @@
 <html lang="sv">
   <head>
     <meta charset="UTF-8" />
+
     <meta
       name="description"
       content="Ett enkelt och gott recept på pannkakor."
     />
+
     <meta name="author" content="Martin Jönsson" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
     <title>Enkla Pannkakor</title>
-    <link rel="icon" type="image/x-icon" href="./assets/logo.svg">
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/logo.svg"
+    />
+
     <link rel="stylesheet" href="index.css" />
+
     <link rel="preconnect" href="https://fonts.bunny.net" />
+
     <link
       href="https://fonts.bunny.net/css?family=autour-one:400|open-sans:300,400,500,600,700,800|poppins:100,200,300,400,500,600,700,800,900"
       rel="stylesheet"
@@ -19,38 +34,86 @@
   </head>
 
   <body>
-   <header class="main-header">
-      <div class="header-container flex-direction">
-        <a href="index.html" class="skip-link">Hoppa till huvudinnehåll</a>
-        <a class="logo-link" href="#" aria-label="Gå till startsidan">
+    <header class="header">
+      <div class="header__container header__container--column">
+        <a href="#main" class="header__skip-link">
+          Hoppa till huvudinnehåll
+        </a>
+
+        <a
+          class="header__logo-link"
+          href="#"
+          aria-label="Gå till startsidan"
+        >
           <img
             src="./assets/logo.svg"
             alt=""
             width="60"
             height="60"
-            class="logo"
+            class="header__logo-image"
           />
-          <span class="logo-text">Ankans Recept</span>
+
+          <span class="header__logo-text">
+            Ankans Recept
+          </span>
         </a>
-        <nav class="main-nav" aria-label="Huvudnavigering">
-          <ul class="nav-list">
-            <li><a href="index.html">Recept</a></li>
-            <li><a href="#about-us">Om oss</a></li>
-            <li><a href="#contact">Kontakt</a></li>
+
+        <nav
+          class="navigation"
+          aria-label="Huvudnavigering"
+        >
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a
+                href="index.html"
+                class="navigation__link"
+              >
+                Recept
+              </a>
+            </li>
+
+            <li class="navigation__item">
+              <a
+                href="#about-us"
+                class="navigation__link"
+              >
+                Om oss
+              </a>
+            </li>
+
+            <li class="navigation__item">
+              <a
+                href="#contact"
+                class="navigation__link"
+              >
+                Kontakt
+              </a>
+            </li>
           </ul>
         </nav>
-        <a href="#" class="login-link" aria-label="Logga in på ditt konto">
-          <img src="./assets/login.svg" alt="Logga in" class="logo" />
+
+        <a
+          href="#"
+          class="header__login-link"
+          aria-label="Logga in på ditt konto"
+        >
+          <img
+            src="./assets/login.svg"
+            alt="Logga in"
+            class="header__login-icon"
+          />
         </a>
       </div>
     </header>
-    <main id="main">
-      <!-- Chose to make this a aria-labelledby incase of more than one recipe per page. -->
-      <article class="recipe-card" aria-labelledby="titel">
-        <div class="hero-section">
-          <!--  Null-alt becuase of decorative nature of the image -->
+
+    <main id="main" class="main-content">
+      <article
+        class="recipe-info"
+        aria-labelledby="recipe-title"
+      >
+        <div class="recipe-info__hero">
           <img
-            class="main-image"
+            class="recipe-info__image"
             src="./assets/main.jpg"
             alt=""
             width="600"
@@ -58,81 +121,164 @@
           />
         </div>
 
-        <!-- Chose to make the text and serving images into one container for organization and styling.-->
-        <div class="recipe-info">
-          <!-- Header for the article-->
-          <header>
-            <h1 id="titel">Enkelt recept på pannkakor</h1>
-            <p class="description">
-              Gör traditionella tunna pannkakor med detta enkla och goda
-              pannkaksrecept.
+        <div class="recipe-info__content">
+          <header class="recipe-info__header">
+            <h1
+              id="recipe-title"
+              class="recipe-info__title"
+            >
+              Enkelt recept på pannkakor
+            </h1>
+
+            <p class="recipe-info__description">
+              Gör traditionella tunna pannkakor med detta
+              enkla och goda pannkaksrecept.
             </p>
           </header>
 
-          <!-- I thought it would be good to organize the ingredients, instructions and serving suggestions into separate sections -->
-          <section>
-            <h2>Ingredienser</h2>
-            <p>För 4 portioner</p>
-            <ul>
-              <li>2 1/2 dl vetemjöl</li>
-              <li>1/2 tsk salt</li>
-              <li>6 dl mjölk</li>
-              <li>3 ägg</li>
-              <li>smör (till stekning)</li>
-              <li>sylt, bär eller frukt till servering</li>
+          <section class="recipe-info__section">
+            <h2 class="recipe-info__subtitle">
+              Ingredienser
+            </h2>
+
+            <p class="recipe-info__servings">
+              För 4 portioner
+            </p>
+
+            <ul class="recipe-info__list">
+              <li class="recipe-info__list-item">
+                2 1/2 dl vetemjöl
+              </li>
+
+              <li class="recipe-info__list-item">
+                1/2 tsk salt
+              </li>
+
+              <li class="recipe-info__list-item">
+                6 dl mjölk
+              </li>
+
+              <li class="recipe-info__list-item">
+                3 ägg
+              </li>
+
+              <li class="recipe-info__list-item">
+                smör (till stekning)
+              </li>
+
+              <li class="recipe-info__list-item">
+                sylt, bär eller frukt till servering
+              </li>
             </ul>
           </section>
 
-          <section>
-            <h2>Så här gör du</h2>
-            <ol>
-              <li>Blanda mjöl och salt i en bunke.</li>
-              <li>Vispa i hälften av mjölken och vispa till en slät smet.</li>
-              <li>Vispa i resten av mjölken och äggen.</li>
-              <li>Låt smeten vila ca 10 minuter.</li>
-              <li>
-                Stek tunna pannkakor i lite smör, för varje pannkaka, i en stek-
-                eller pannkakspanna.
+          <section class="recipe-info__section">
+            <h2 class="recipe-info__subtitle">
+              Så här gör du
+            </h2>
+
+            <ol class="recipe-info__list">
+              <li class="recipe-info__list-item">
+                Blanda mjöl och salt i en bunke.
               </li>
-              <li>Servera med sylt, bär eller frukt.</li>
+
+              <li class="recipe-info__list-item">
+                Vispa i hälften av mjölken och vispa till
+                en slät smet.
+              </li>
+
+              <li class="recipe-info__list-item">
+                Vispa i resten av mjölken och äggen.
+              </li>
+
+              <li class="recipe-info__list-item">
+                Låt smeten vila ca 10 minuter.
+              </li>
+
+              <li class="recipe-info__list-item">
+                Stek tunna pannkakor i lite smör, för
+                varje pannkaka, i en stek- eller
+                pannkakspanna.
+              </li>
+
+              <li class="recipe-info__list-item">
+                Servera med sylt, bär eller frukt.
+              </li>
             </ol>
           </section>
 
-          <section>
-            <h2>Serveringsförslag</h2>
-            <!-- Figure element for grouping the serving images -->
-            <figure class="serving-images">
+          <section class="recipe-info__section">
+            <h2 class="recipe-info__subtitle">
+              Serveringsförslag
+            </h2>
+
+            <figure class="recipe-info__gallery">
               <img
                 loading="lazy"
                 src="./assets/serving1.jpg"
                 alt="Pannkakor med grädde vid sidan av."
                 width="400"
                 height="600"
+                class="recipe-info__gallery-image"
               />
+
               <img
                 loading="lazy"
                 src="./assets/serving2.jpg"
                 alt="Pannkakor med apelsin, honung och nötter."
                 width="400"
                 height="600"
+                class="recipe-info__gallery-image"
               />
             </figure>
           </section>
         </div>
       </article>
     </main>
-    <footer>
-      <!-- Fieldset for accessibility -->
-      <fieldset id="mode-switcher" class="mode-switcher">
-        <legend class="select-theme-text">Välj färgtema:</legend>
 
-        <div class="select-theme-radio">
-          <input type="radio" name="theme" id="light" value="light" checked />
-          <label for="light">Ljust</label>
-          <input type="radio" name="theme" id="dark" value="dark" />
-          <label for="dark">Mörkt</label>
+    <footer class="footer">
+      <fieldset
+        id="mode-switcher"
+        class="theme-switcher"
+      >
+        <legend class="theme-switcher__legend">
+          Välj färgtema:
+        </legend>
+
+        <div class="theme-switcher__options">
+          <input
+            type="radio"
+            name="theme"
+            id="light"
+            value="light"
+            checked
+            class="theme-switcher__input"
+          />
+
+          <label
+            for="light"
+            class="theme-switcher__label"
+          >
+            Ljust
+          </label>
+
+          <input
+            type="radio"
+            name="theme"
+            id="dark"
+            value="dark"
+            class="theme-switcher__input"
+          />
+
+          <label
+            for="dark"
+            class="theme-switcher__label"
+          >
+            Mörkt
+          </label>
         </div>
       </fieldset>
     </footer>
   </body>
 </html>
+```

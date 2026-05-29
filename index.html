@@ -8,10 +8,14 @@
     />
     <meta name="author" content="Martin Jönsson" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Enkla Pannkakor</title>
+
     <link rel="icon" type="image/x-icon" href="./assets/logo.svg" />
     <link rel="stylesheet" href="index.css" />
+
     <link rel="preconnect" href="https://fonts.bunny.net" />
+
     <link
       href="https://fonts.bunny.net/css?family=autour-one:400|open-sans:300,400,500,600,700,800|poppins:100,200,300,400,500,600,700,800,900"
       rel="stylesheet"
@@ -19,182 +23,228 @@
   </head>
 
   <body>
-    <header class="main-header">
-      <div class="header-container flex-direction">
-        <a href="index.html" class="skip-link">Hoppa till huvudinnehåll</a>
-        <a class="logo-link" href="#" aria-label="Gå till startsidan">
+    <header class="header">
+      <div class="header__container header__container--column">
+        <a href="index.html" class="header__skip-link">
+          Hoppa till huvudinnehåll
+        </a>
+
+        <a class="header__logo-link" href="#" aria-label="Gå till startsidan">
           <img
             src="./assets/logo.svg"
             alt=""
             width="60"
             height="60"
-            class="logo"
+            class="header__logo-image"
           />
-          <span class="logo-text">Ankans Recept</span>
+
+          <span class="header__logo-text">Ankans Recept</span>
         </a>
-        <nav class="main-nav" aria-label="Huvudnavigering">
-          <ul class="nav-list">
-            <li><a href="index.html">Recept</a></li>
-            <li><a href="#about-us">Om oss</a></li>
-            <li><a href="#contact">Kontakt</a></li>
+
+        <nav class="navigation" aria-label="Huvudnavigering">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="index.html" class="navigation__link">Recept</a>
+            </li>
+
+            <li class="navigation__item">
+              <a href="#about-us" class="navigation__link">Om oss</a>
+            </li>
+
+            <li class="navigation__item">
+              <a href="#contact" class="navigation__link">Kontakt</a>
+            </li>
           </ul>
         </nav>
-        <a href="#" class="login-link" aria-label="Logga in på ditt konto">
-          <img src="./assets/login.svg" alt="Logga in" class="logo" />
+
+        <a
+          href="#"
+          class="header__login-link"
+          aria-label="Logga in på ditt konto"
+        >
+          <img
+            src="./assets/login.svg"
+            alt="Logga in"
+            class="header__login-icon"
+          />
         </a>
       </div>
     </header>
-    <main>
-      <div class="card-grid">
-        <a href="pancakes.html" class="card-link">
-          <div class="card">
+
+    <main class="main-content">
+      <section class="recipe-grid">
+        <article class="recipe-card">
+          <a href="pancakes.html" class="recipe-card__link">
             <img
               src="./assets/main.jpg"
               alt="Pannkakor"
               width="200"
               height="200"
-              class="card-image"
+              class="recipe-card__image"
             />
-            <div class="card-text">
-              <h2>Enkla Pannkakor</h2>
-              <p>
+            <div class="recipe-card__content">
+              <h2 class="recipe-card__title">Enkla Pannkakor</h2>
+              <p class="recipe-card__description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptas, doloremque.
               </p>
-              <div class="tags">
-                <span class="tag">Gluten</span>
-                <span class="tag">Laktos</span>
-                <span class="tag">Socker</span>
+              <div class="recipe-card__tags">
+                <span class="recipe-card__tag"> Gluten </span>
+                <span class="recipe-card__tag"> Laktos </span>
+                <span class="recipe-card__tag"> Socker </span>
               </div>
             </div>
-          </div>
-        </a>
-        <a href="pancakes.html" class="card-link">
-          <div class="card">
+          </a>
+        </article>
+        <article class="recipe-card">
+          <a href="pancakes.html" class="recipe-card__link">
             <img
               src="./assets/serving1.jpg"
               alt="Pannkakor"
               width="200"
               height="200"
-              class="card-image"
+              class="recipe-card__image"
             />
-            <div class="card-text">
-              <h2>Mellan Pannkakor</h2>
-              <p>
+            <div class="recipe-card__content">
+              <h2 class="recipe-card__title">Mellan Pannkakor</h2>
+              <p class="recipe-card__description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptas, doloremque.
               </p>
-              <div class="tags">
-                <span class="tag">Gluten</span>
-                <span class="tag">Laktos</span>
-                <span class="tag">Socker</span>
-                <span class="tag">Lakrits</span>
-                <span class="tag">Långa Instruktioner</span>
+              <div class="recipe-card__tags">
+                <span class="recipe-card__tag"> Gluten </span>
+                <span class="recipe-card__tag"> Laktos </span>
+                <span class="recipe-card__tag"> Socker </span>
+                <span class="recipe-card__tag"> Lakrits </span>
+                <span class="recipe-card__tag"> Långa Instruktioner </span>
               </div>
             </div>
-          </div>
-        </a>
-        <a href="pancakes.html" class="card-link">
-          <div class="card">
+          </a>
+        </article>
+        <article class="recipe-card">
+          <a href="pancakes.html" class="recipe-card__link">
             <img
               src="./assets/serving2.jpg"
               alt="Pannkakor"
               width="200"
               height="200"
-              class="card-image"
+              class="recipe-card__image"
             />
-            <div class="card-text">
-              <h2>Svåra Pannkakor</h2>
-              <p>
+            <div class="recipe-card__content">
+              <h2 class="recipe-card__title">Svåra Pannkakor</h2>
+              <p class="recipe-card__description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptas, doloremque.
               </p>
-              <div class="tags">
-                <span class="tag">Gluten</span>
-                <span class="tag">Socker</span>
+              <div class="recipe-card__tags">
+                <span class="recipe-card__tag"> Gluten </span>
+                <span class="recipe-card__tag"> Socker </span>
               </div>
             </div>
-          </div>
-        </a>
-        <a href="pancakes.html" class="card-link">
-          <div class="card">
+          </a>
+        </article>
+        <article class="recipe-card">
+          <a href="pancakes.html" class="recipe-card__link">
             <img
               src="https://picsum.photos/200/300?random=1"
               alt="Pannkakor"
               width="200"
               height="200"
-              class="card-image"
+              class="recipe-card__image"
             />
-            <div class="card-text">
-              <h2>Jättesvåra Pannkakor</h2>
-              <p>
+            <div class="recipe-card__content">
+              <h2 class="recipe-card__title">Jättesvåra Pannkakor</h2>
+              <p class="recipe-card__description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptas, doloremque.
               </p>
-              <div class="tags">
-                <span class="tag">Gluten</span>
-                <span class="tag">Laktos</span>
-                <span class="tag">Socker</span>
-                <span class="tag">Apelsin</span>
+              <div class="recipe-card__tags">
+                <span class="recipe-card__tag"> Gluten </span>
+                <span class="recipe-card__tag"> Laktos </span>
+                <span class="recipe-card__tag"> Socker </span>
+                <span class="recipe-card__tag"> Apelsin </span>
               </div>
             </div>
-          </div>
-        </a>
-        <a href="pancakes.html" class="card-link">
-          <div class="card">
+          </a>
+        </article>
+        <article class="recipe-card">
+          <a href="pancakes.html" class="recipe-card__link">
             <img
               src="https://picsum.photos/200/300?random=2"
               alt="Pannkakor"
               width="200"
               height="200"
-              class="card-image"
+              class="recipe-card__image"
             />
-            <div class="card-text">
-              <h2>Super Mega Dunder Svåra Pannkakor</h2>
-              <p>
+            <div class="recipe-card__content">
+              <h2 class="recipe-card__title">
+                Super Mega Dunder Svåra Pannkakor
+              </h2>
+              <p class="recipe-card__description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptas, doloremque.
               </p>
-              <div class="tags">
-                <span class="tag">Gluten</span>
-                <span class="tag">Laktos</span>
-                <span class="tag">Socker</span>
-                <span class="tag">Jordgubbar</span>
+              <div class="recipe-card__tags">
+                <span class="recipe-card__tag"> Gluten </span>
+                <span class="recipe-card__tag"> Laktos </span>
+                <span class="recipe-card__tag"> Socker </span>
+                <span class="recipe-card__tag"> Jordgubbar </span>
               </div>
             </div>
-          </div>
-        </a>
-        <a href="pancakes.html" class="card-link">
-          <div class="card">
-            <img src="https://picsum.photos/200/300?random=3" alt="Pannkakor" />
-            <div class="card-text">
-              <h2>Darksouls Pannkakor</h2>
-              <p>
+          </a>
+        </article>
+        <article class="recipe-card">
+          <a href="pancakes.html" class="recipe-card__link">
+            <img
+              src="https://picsum.photos/200/300?random=3"
+              alt="Pannkakor"
+              class="recipe-card__image"
+            />
+            <div class="recipe-card__content">
+              <h2 class="recipe-card__title">Darksouls Pannkakor</h2>
+              <p class="recipe-card__description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptas, doloremque.
               </p>
-              <div class="tags">
-                <span class="tag">Gluten</span>
-                <span class="tag">Laktos</span>
-                <span class="tag">Socker</span>
+              <div class="recipe-card__tags">
+                <span class="recipe-card__tag"> Gluten </span>
+                <span class="recipe-card__tag"> Laktos </span>
+                <span class="recipe-card__tag"> Socker </span>
               </div>
             </div>
-          </div>
-        </a>
-      </div>
+          </a>
+        </article>
+      </section>
     </main>
-    <footer>
-      <!-- Fieldset for accessibility -->
-      <fieldset id="mode-switcher" class="mode-switcher">
-        <legend class="select-theme-text">Välj färgtema:</legend>
 
-        <div class="select-theme-radio">
-          <input type="radio" name="theme" id="light" value="light" checked />
-          <label for="light">Ljust</label>
-          <input type="radio" name="theme" id="dark" value="dark" />
-          <label for="dark">Mörkt</label>
+    <footer class="footer">
+      <fieldset id="mode-switcher" class="theme-switcher">
+        <legend class="theme-switcher__legend">Välj färgtema:</legend>
+
+        <div class="theme-switcher__options">
+          <input
+            type="radio"
+            name="theme"
+            id="light"
+            value="light"
+            checked
+            class="theme-switcher__input"
+          />
+
+          <label for="light" class="theme-switcher__label"> Ljust </label>
+
+          <input
+            type="radio"
+            name="theme"
+            id="dark"
+            value="dark"
+            class="theme-switcher__input"
+          />
+
+          <label for="dark" class="theme-switcher__label"> Mörkt </label>
         </div>
       </fieldset>
     </footer>
   </body>
 </html>
+```
