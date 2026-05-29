@@ -90,7 +90,7 @@ body {
 }
 
 main {
-  padding-bottom: 4rem;
+  padding-block-end: 4rem;
 }
 
 footer {
@@ -129,7 +129,7 @@ h1 {
 
 ul,
 ol {
-  padding-left: var(--spacing-large);
+  padding-inline-start: var(--spacing-large);
 }
 
 li {
@@ -142,10 +142,11 @@ a {
 
 .main-header {
   position: sticky;
+  z-index: 1000;
   top: 0;
   background-color: var(--clr-ld-header-bg);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--clr-ld-recipe-bg);
+  border-block-end: 1px solid var(--clr-ld-recipe-bg);
 }
 
 .logo {
@@ -168,7 +169,7 @@ a {
 
 .logo-link:hover,
 .logo-link:focus {
-  border-bottom: 1px solid var(--clr-light-purple);
+  border-block-end: 1px solid var(--clr-light-purple);
 }
 
 .header-container {
@@ -201,7 +202,7 @@ a {
   &:hover,
   &:focus {
     color: var(--clr-light-purple);
-    border-bottom: 1px solid var(--clr-light-purple);
+    border-block-end: 1px solid var(--clr-light-purple);
   }
 }
 
@@ -301,26 +302,7 @@ a {
   border-radius: 1rem;
 }
 
-/* Adding rotation effects */
 
-.card-link {
-  transform: rotate(3deg);
-}
-.card-link:nth-child(2n) {
-  transform: rotate(-2deg);
-}
-.card-link:nth-child(3n) {
-  transform: rotate(1deg);
-}
-.card-link:nth-child(4n) {
-  transform: rotate(-3deg);
-}
-.card-link:nth-child(5n) {
-  transform: rotate(-2deg);
-}
-.card-link:nth-child(6n) {
-  transform: rotate(2deg);
-}
 
 .card:hover,
 .card:focus {
@@ -372,4 +354,25 @@ a {
   .logo-text {
     display: block;
   }
+
+  /* Adding rotation effects */
+
+.card-link {
+  transform: rotate(3deg);
+}
+.card-link:nth-child(2n) {
+  transform: rotate(-2deg);
+}
+.card-link:nth-child(3n) {
+  transform: rotate(1deg);
+}
+.card-link:nth-child(4n) {
+  transform: rotate(-3deg);
+}
+.card-link:nth-child(5n) {
+  transform: rotate(-2deg);
+}
+.card-link:nth-child(6n) {
+  transform: rotate(2deg);
+}
 }
