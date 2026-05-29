@@ -350,8 +350,17 @@ h1 {
   flex-wrap: wrap;
   gap: var(--spacing-small);
   margin-top: var(--spacing-medium);
+
 }
-```
+
+.recipe-card__tag {
+  background-color: var(--clr-ld-title);
+  color: var(--clr-white);
+  padding-inline:  var(--spacing-small);
+  border-radius: 100rem;
+  font-size: 0.875rem;
+}
+
 
 
 /* =========================
@@ -359,9 +368,7 @@ h1 {
 ========================= */
 
 .footer {
-  width: 100%;
   display: flex;
-  justify-content: center;
   padding: var(--spacing-small);
   background-color: var(--clr-ld-footer-bg);
   border-radius: 1rem 1rem 0 0;
@@ -370,6 +377,7 @@ h1 {
 .theme-switcher {
   display: flex;
   flex-direction: column;
+  place-content: center;
   padding-inline: var(--spacing-large);
   border-radius: 0.5rem;
   background-color: var(--clr-ld-main-bg);
