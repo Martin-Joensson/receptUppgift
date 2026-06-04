@@ -4,27 +4,27 @@
 
 :root {
   /* Colors */
-  --clr-light-pink: hsl(7, 68%, 85%);
-  --clr-black: hsl(0, 0%, 6%);
-  --clr-dark-gray: hsl(0, 0%, 17%);
-  --clr-middle-gray: hsl(0, 0%, 31%);
-  --clr-white: hsl(0, 0%, 99%);
+  --clr-light-pink: oklch(0.862 0.0534 26.87);
+  --clr-black: oklch(16.842% 0.00002 271.152);
+  --clr-dark-gray: oklch(28.908% 0.00003 271.152);
+  --clr-middle-gray: oklch(42.761% 0.00005 271.152);
+  --clr-white: oklch(99.107% 0.00011 271.152);
 
-  --clr-accent-yellow: hsl(50, 86%, 97%);
+  --clr-accent-yellow: oklch(98.962% 0.01449 98.34);
 
-  --clr-description-border: hsl(0, 0%, 31%);
+  --clr-description-border: oklch(42.761% 0.00005 271.152);
 
-  --clr-accent-yellow-transparent: hsla(51, 68%, 85%, 0.5);
-  --clr-middle-gray-transparent: hsla(90, 0%, 17%, 0.5);
+  --clr-accent-yellow-transparent: oklch(93.541% 0.05773 98.85 / 0.5);
+  --clr-middle-gray-transparent: oklch(28.908% 0.00003 271.152 / 0.5);
 
-  --clr-dark-pink-transparent: hsla(7, 68%, 85%, 0.5);
-  --clr-black-transparent: hsla(0, 0%, 17%, 0.5);
+  --clr-dark-pink-transparent: oklch(86.198% 0.05339 26.778 / 0.5);
+  --clr-black-transparent: oklch(28.908% 0.00003 271.152 / 0.5);
 
-  --clr-dark-purple: hsl(300, 24%, 39%);
-  --clr-light-purple: hsl(302, 32%, 58%);
+  --clr-dark-purple: oklch(48.759% 0.09238 326.848);
+  --clr-light-purple: oklch(64.722% 0.09238 326.848);
 
-  --clr-dark-text: hsl(0, 0%, 0%);
-  --clr-light-text: hsl(0, 0%, 99%);
+  --clr-dark-text: oklch(0% 0 0);
+  --clr-light-text: oklch(99.107% 0.00011 271.152);
 
   /* Light/Dark mode color pairs */
   --clr-ld-main-bg: light-dark(var(--clr-light-pink), var(--clr-black));
@@ -74,6 +74,13 @@
 
 *:not(dialog) {
   margin: 0;
+}
+
+input,
+button,
+select,
+textarea {
+  font: inherit;
 }
 
 img,
@@ -148,6 +155,20 @@ h2 {
   font-size: clamp(1rem, 3vw + 0.5rem, 1.5rem);
 }
 
+button {
+  margin: 0;
+  background-color: var(--clr-ld-recipe-bg);
+
+  &:hover,
+  &:focus {
+    background-color: var(--clr-light-purple);
+  }
+
+  &:active {
+    background-color: var(--clr-dark-purple);
+  }
+}
+
 .button-link {
   display: inline-block;
   padding: var(--spacing-small) var(--spacing-medium);
@@ -161,11 +182,11 @@ h2 {
     background-color 0.2s ease,
     transform 0.2s ease;
 
-    &:hover,
-    &:focus {
-      background-color: var(--clr-ld-title);
-      transform: translateY(-3px);
-    }
+  &:hover,
+  &:focus {
+    background-color: var(--clr-ld-title);
+    transform: translateY(-3px);
+  }
 }
 
 /* =========================
@@ -232,8 +253,8 @@ h2 {
 
   &:hover,
   &:focus {
-      border-block-end: 1px solid var(--clr-light-purple);
-    }
+    border-block-end: 1px solid var(--clr-light-purple);
+  }
 }
 
 .header__logo-image {
@@ -280,12 +301,10 @@ h2 {
 
   &:hover,
   &:focus {
-  color: var(--clr-light-purple);
-  border-block-end: 1px solid var(--clr-light-purple);
+    color: var(--clr-light-purple);
+    border-block-end: 1px solid var(--clr-light-purple);
   }
 }
-
-
 
 /* =========================
    Hero Section
@@ -315,6 +334,74 @@ h2 {
     color: var(--clr-white);
     font-size: clamp(1rem, 3.5vw + 0.5rem, 3.5rem);
   }
+}
+
+/* =========================
+   Form
+========================= */
+
+.newsletter {
+  background-color: var(--clr-accent-yellow-transparent);
+
+  margin: auto;
+  padding: 1rem;
+
+  border-radius: 0 0 var(--spacing-small) var(--spacing-small);
+}
+
+.newsletter__content {
+    max-width: var(--content-max-width);
+    margin-inline: auto;
+}
+
+.newsletter form {
+  display: grid;
+  gap: 1rem;
+
+  @media (width > 1024px){
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form-group {
+  display: grid;
+  gap: 0.5ch;
+}
+
+label{
+  text-transform: uppercase;
+}
+
+input {
+  padding: var(--spacing-small);
+  border-radius: 0.5rem;
+  accent-color: var(--clr-dark-purple);
+}
+
+input:not([type="checkbox"],[type="radio"]){
+  width: 100%;
+}
+
+.form-group:has(.fine-print) {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 0.5ch;
+}
+
+
+
+form button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+
+.fine-print {
+  font-size: 0.6rem;
+}
+
+.newsletter button{
+  justify-self: start;
 }
 
 /* =========================
