@@ -348,7 +348,7 @@ button {
 }
 
 /* =========================
-   Form
+   Forms
 ========================= */
 
 .newsletter,
@@ -361,7 +361,8 @@ button {
   margin-inline: auto;
 }
 
-.newsletter form {
+.newsletter form,
+.recipe-form form {
   display: grid;
   gap: var(--spacing-medium);
 
@@ -395,6 +396,10 @@ input:not([type="checkbox"], [type="radio"]) {
   gap: 0.5ch;
 }
 
+.text-area{
+  grid-column: 1/ -1;
+}
+
 form button {
   padding: var(--spacing-medium);
   border-radius: 0.5rem;
@@ -404,8 +409,16 @@ form button {
   font-size: 0.6rem;
 }
 
-.newsletter button {
+.submit-button {
   justify-self: start;
+}
+
+
+.rating-labels{
+  display: flex;
+  justify-content: space-between;
+  padding-inline: var(--spacing-small);
+  
 }
 
 /* =========================
