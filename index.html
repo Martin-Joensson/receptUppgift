@@ -10,12 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Enkla Pannkakor</title>
-
     <link rel="icon" type="image/x-icon" href="./assets/logo.svg" />
     <link rel="stylesheet" href="index.css" />
-
     <link rel="preconnect" href="https://fonts.bunny.net" />
-
     <link
       href="https://fonts.bunny.net/css?family=autour-one:400|open-sans:300,400,500,600,700,800|poppins:100,200,300,400,500,600,700,800,900"
       rel="stylesheet"
@@ -37,7 +34,6 @@
             height="60"
             class="header__logo-image"
           />
-
           <span class="header__logo-text">Ankans Recept</span>
         </a>
 
@@ -52,7 +48,9 @@
             </li>
 
             <li class="navigation__item">
-              <a href="#contact" class="navigation__link">Kontakt</a>
+              <a href="sendrecipe.html" class="navigation__link"
+                >Skicka recept till oss</a
+              >
             </li>
           </ul>
         </nav>
@@ -75,7 +73,7 @@
       <section
         class="hero"
         style="
-          background-image: url(./assets/hero-bg.jpg);
+          background-image: url(./assets/main.jpg);
           background-size: cover;
           background-position: center;
         "
@@ -87,38 +85,10 @@
             Upptäck våra enkla och goda recept på pannkakor, perfekta för alla
             tillfällen!
           </p>
-          <a href="pancakes.html" class="button-link">Se Recept</a>
+          <a href="pancakes.html" class="button-link">Börja här</a>
         </div>
       </section>
-      <section class="newsletter">
-        <div class="newsletter__content">
-          <h2>Prenumerera på vårt nyhetsbrev</h2>
-          <form action="#" method="post">
-            <div class="form-group">
-              <label for="name">Namn:</label>
-              <input type="text" name="name" id="name" required />
-            </div>
 
-            <div class="form-group">
-              <label for="email">Email:</label>
-              <input type="email" name="email" id="email" required />
-            </div>
-
-            <div class="form-group">
-              <input
-                type="checkbox"
-                name="accept-terms"
-                id="accept-terms"
-                required
-              />
-              <label for="accept-terms" class="fine-print">
-                Accepterar du att få ett nyhetsbrev från oss?
-              </label>
-            </div>
-            <button class="submit-button" type="submit">Prenumerera</button>
-          </form>
-        </div>
-      </section>
       <section class="recipe-grid">
         <article class="recipe-card">
           <a href="pancakes.html" class="recipe-card__link">
@@ -264,33 +234,80 @@
       </section>
     </main>
 
+    <section class="newsletter">
+      <div class="form-content">
+        <h2>Prenumerera på vårt nyhetsbrev</h2>
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="name">Namn:</label>
+            <input type="text" name="name" id="name" required />
+          </div>
+          <div class="form-group">
+            <label for="last-name">Efternamn:</label>
+            <input type="text" name="last-name" id="last-name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required />
+          </div>
+
+          <fieldset class="form-group">
+            <label for="recipe-radio">
+              <input type="radio" name="content-radio" id="recipe-radio" />
+              Bara Recept
+            </label>
+            <label for="inspiration-radio">
+              <input type="radio" name="content-radio" id="inspiration-radio" />
+              Recept + Inspiration
+            </label>
+          </fieldset>
+
+          <div class="form-group">
+            <input
+              type="checkbox"
+              name="accept-terms"
+              id="accept-terms"
+              required
+            />
+            <label for="accept-terms" class="fine-print">
+              Accepterar du att få ett nyhetsbrev från oss?
+            </label>
+          </div>
+          <button class="submit-button" type="submit">Prenumerera</button>
+        </form>
+      </div>
+    </section>
+
     <footer class="footer">
-      <fieldset id="mode-switcher" class="theme-switcher">
-        <legend class="theme-switcher__legend">Välj färgtema:</legend>
+      <div class="footer__content">
+        <fieldset id="mode-switcher" class="theme-switcher">
+          <legend class="theme-switcher__legend">Välj färgtema:</legend>
 
-        <div class="theme-switcher__options">
-          <input
-            type="radio"
-            name="theme"
-            id="light"
-            value="light"
-            checked
-            class="theme-switcher__input"
-          />
+          <div class="theme-switcher__options">
+            <input
+              type="radio"
+              name="theme"
+              id="light"
+              value="light"
+              checked
+              class="theme-switcher__input"
+            />
 
-          <label for="light" class="theme-switcher__label"> Ljust </label>
+            <label for="light" class="theme-switcher__label"> Ljust </label>
 
-          <input
-            type="radio"
-            name="theme"
-            id="dark"
-            value="dark"
-            class="theme-switcher__input"
-          />
+            <input
+              type="radio"
+              name="theme"
+              id="dark"
+              value="dark"
+              class="theme-switcher__input"
+            />
 
-          <label for="dark" class="theme-switcher__label"> Mörkt </label>
-        </div>
-      </fieldset>
+            <label for="dark" class="theme-switcher__label"> Mörkt </label>
+          </div>
+        </fieldset>
+      </div>
     </footer>
   </body>
 </html>
