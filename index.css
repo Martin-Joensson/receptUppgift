@@ -46,7 +46,7 @@
 
   /* Fonts */
   --font-primary: "Poppins", sans-serif;
-  --font-heading: "Autour One", display;
+  --font-heading: "Autour One", serif;
 
   /* Font weights */
   --font-weight-regular: 400;
@@ -69,7 +69,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  scroll-gutter: stable;
+
 }
 
 *:not(dialog) {
@@ -108,6 +108,10 @@ li {
    Theme
 ========================= */
 
+html {
+    scrollbar-gutter: stable;
+}
+
 html:has(#mode-switcher #light:checked) {
   color-scheme: light;
 }
@@ -133,9 +137,7 @@ body {
   color: var(--clr-ld-text);
 }
 
-a {
-  padding: var(--spacing-small);
-}
+
 
 h1,
 h2,
@@ -198,7 +200,7 @@ button {
 ========================= */
 
 .main-content {
-  padding-block-end: 4rem;
+  padding-block-end: var(--spacing-large);
 }
 
 .header__container,
@@ -230,7 +232,6 @@ button {
   align-items: center;
   justify-content: space-between;
   padding-block: var(--spacing-medium);
-  padding-inline: var(--spacing-small);
 }
 
 .header__container--column {
@@ -301,16 +302,13 @@ button {
   padding: 0;
 }
 
-.navigation__item {
-  display: flex;
-}
-
 .navigation__link {
   text-decoration: none;
   color: var(--clr-ld-text);
   font-weight: var(--font-weight-bold);
   flex: 1 0 auto;
   text-align: center;
+  padding-inline: var(--spacing-small);
 
   &:hover,
   &:focus {
@@ -356,7 +354,7 @@ button {
 .newsletter,
 .recipe-form {
   background-color: var(--clr-ld-description-bg);
-  padding: 1rem;
+  padding: var(--spacing-medium);
 }
 
 .form-content {
@@ -365,7 +363,7 @@ button {
 
 .newsletter form {
   display: grid;
-  gap: 1rem;
+  gap: var(--spacing-medium);
 
   @media (width > 1024px) {
     grid-template-columns: 1fr 1fr;
@@ -398,7 +396,7 @@ input:not([type="checkbox"], [type="radio"]) {
 }
 
 form button {
-  padding: 1rem;
+  padding: var(--spacing-medium);
   border-radius: 0.5rem;
 }
 
@@ -428,30 +426,30 @@ form button {
 
 .recipe-card {
   min-height: 300px;
-  transform: rotate(3deg);
+  transform: rotate(var(--rotation, 0deg));
 }
 
 /* =========================
    Randomize card rotation
 ========================= */
 .recipe-card:nth-child(2n) {
-  transform: rotate(-2deg);
+  --rotation: -2deg;
 }
 
 .recipe-card:nth-child(3n) {
-  transform: rotate(1deg);
+  --rotation: 1deg;
 }
 
 .recipe-card:nth-child(4n) {
-  transform: rotate(-3deg);
+  --rotation: -3deg;
 }
 
 .recipe-card:nth-child(5n) {
-  transform: rotate(-2deg);
+  --rotation: -2deg;
 }
 
 .recipe-card:nth-child(6n) {
-  transform: rotate(2deg);
+  --rotation: 2deg;
 }
 
 .recipe-card__link {
@@ -541,16 +539,16 @@ form button {
 
 .recipe-info {
   margin-inline: auto;
-  margin-block-start: 1rem;
+  margin-block-start: var(--spacing-medium);
   background-color: var(--clr-ld-recipe-bg);
   border-radius: 2rem;
 }
 
 .recipe-info__content {
-  padding: 3rem 1rem 4rem;
+  padding: var(--spacing-large) var(--spacing-medium) var(--spacing-large);
 
   @media (width > 740px) {
-    padding: 3rem 3rem 4rem;
+    padding: var(--spacing-large);
   }
 }
 
